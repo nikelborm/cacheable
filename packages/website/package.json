@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test:ci": "echo 'no tests needed'",
+    "test": "echo 'no tests needed'",
     "generate-docs": "ts-node ./src/docs.ts",
     "build": "yarn generate-docs && docula build",
     "build-serve": "yarn generate-docs && docula serve",

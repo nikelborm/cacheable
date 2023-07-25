@@ -85,3 +85,4 @@ dist
 
 # Coverage
 coverage.lcov
+testdb.sqlite

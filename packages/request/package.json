@@ -18,7 +18,8 @@
 		"clean": "rm -rf node_modules && rm -rf ./coverage && rm -rf ./package-lock.json && rm -rf ./test/testdb.sqlite && rm -rf ./dist"
 	},
 	"files": [
-		"dist"
+		"dist",
+		"src"
 	],
 	"keywords": [
 		"HTTP",

@@ -47,7 +47,7 @@
 
 .home-hero img {
   width: 100%;
-  max-width: 120px;
+  max-width: 300px;
 }
 
 .content-container {
@@ -192,6 +192,10 @@ footer img {
     padding: 64px 0 72px;
   }
 
+  .home-hero img {
+    max-width: 360px;
+  }
+
   .home-container {
     margin-left: 64px;
     margin-right: 64px;
@@ -200,16 +204,12 @@ footer img {
 
 
 @media screen and (min-width: 768px) {
-  .home-hero {
-    padding: 72px 0;
-  }
-
   .header-logo {
     margin-right: 56px;
   }
 
   .home-hero img {
-    max-width: 180px;
+    max-width: 480px;
   }
 
   .content-container {
@@ -227,11 +227,6 @@ footer img {
 
 
 @media screen and (min-width: 992px) {
-  .home-container {
-    margin: 72px auto 56px;
-    max-width: 70%;
-  }
-
   .home-container h1 {
     font-size: 32px;
   }
@@ -241,7 +236,7 @@ footer img {
   }
 
   .home-hero {
-    padding: 120px 0;
+    padding: 72px 0;
   }
 
   .nav {
@@ -255,7 +250,7 @@ footer img {
   }
 
   .home-hero img {
-    max-width: 250px;
+    max-width: 480px;
   }
 
   .home-title {
@@ -278,28 +273,5 @@ footer img {
   footer img {
     height: 40px;
     width: auto;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .home-container {
-    max-width: 950px;
-  }
-
-  .content-container {
-    margin: 160px 0;
-  }
-
-  .versions-container {
-    margin: 120px 0;
-  }
-
-  .facepile > a {
-    margin-left: -30px;
-  }
-
-  .facepile img {
-    max-width: 70px;
-    max-height: 70px;
   }
 }

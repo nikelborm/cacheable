@@ -1,11 +1,11 @@
 import * as fs from "fs-extra";
-import os from "os";
 
 async function main() {
 
     console.log("packages path:" + getRelativePackagePath());
 
     await copyPackages();
+
 };
 
 async function copyPackages() {
@@ -22,7 +22,7 @@ async function copyPackages() {
 }
 
 function cleanDocumentFromImage(document: string) {
-    document = document.replace(`[<img width="100" align="right" src="https://jaredwray.com/images/keyv.svg" alt="keyv">](https://github.com/jaredwra/keyv)`, "");
+    document = document.replace(`<h1 align="center"><br><img width="380" src="https://cacheable.org/assets/images/cacheable_white.svg" alt="cacheable logo"><br><br></h1>`, "");
     return document;
 };
 

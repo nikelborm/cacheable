@@ -1,16 +1,11 @@
-<h1 align="center">
-	<br>
-	<img width="300" src="https://jaredwray.com/images/cacheable_white.svg" alt="cacheable logo">
-	<br>
-	<br>
-</h1>
+<h1 align="center"><br><img width="380" src="https://cacheable.org/assets/images/cacheable_white.svg" alt="cacheable logo"><br><br></h1>
 
 # cacheable-request
 
 > Wrap native HTTP requests with RFC compliant cache support
 
-[![tests](https://github.com/jaredwray/cacheable-request/actions/workflows/tests.yaml/badge.svg)](https://github.com/jaredwray/cacheable-request/actions/workflows/tests.yaml)
-[![codecov](https://codecov.io/gh/jaredwray/cacheable-request/branch/master/graph/badge.svg?token=LDLaqe4PsI)](https://codecov.io/gh/jaredwray/cacheable-request)
+[![tests](https://github.com/jaredwray/cacheable/actions/workflows/tests.yaml/badge.svg)](https://github.com/jaredwray/cacheable/actions/workflows/tests.yaml)
+[![codecov](https://codecov.io/gh/jaredwray/cacheable/branch/master/graph/badge.svg?token=LDLaqe4PsI)](https://codecov.io/gh/jaredwray/cacheable)
 [![npm](https://img.shields.io/npm/dm/cacheable-request.svg)](https://www.npmjs.com/package/cacheable-request)
 [![npm](https://img.shields.io/npm/v/cacheable-request.svg)](https://www.npmjs.com/package/cacheable-request)
 

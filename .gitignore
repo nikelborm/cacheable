@@ -86,3 +86,5 @@ dist
 # Coverage
 coverage.lcov
 testdb.sqlite
+github.json
+request.md

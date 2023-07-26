@@ -1,9 +1,4 @@
-<h1 align="center">
-	<br>
-	<img width="300" src="https://jaredwray.com/images/cacheable_white.svg" alt="cacheable logo">
-	<br>
-	<br>
-</h1>
+<h1 align="center"><br><img width="380" src="https://cacheable.org/assets/images/cacheable_white.svg" alt="cacheable logo"><br><br></h1>
 
 > Caching for Nodejs based on Keyv
 

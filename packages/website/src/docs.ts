@@ -1,11 +1,11 @@
 import * as fs from "fs-extra";
-import os from "os";
 
 async function main() {
 
     console.log("packages path:" + getRelativePackagePath());
 
     await copyPackages();
+
 };
 
 async function copyPackages() {

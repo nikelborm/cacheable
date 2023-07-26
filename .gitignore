@@ -86,4 +86,5 @@ dist
 # Coverage
 coverage.lcov
 testdb.sqlite
-packages/website/site/_data/github.json
+github.json
+request.md

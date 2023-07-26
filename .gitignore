@@ -87,4 +87,4 @@ dist
 coverage.lcov
 github.json
 request.md
-*.sqlite
+/packages/request/test/*.sqlite

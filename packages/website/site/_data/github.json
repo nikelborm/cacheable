@@ -1,6 +1,46 @@
 {
   "releases": [
     {
+      "url": "https://api.github.com/repos/jaredwray/cacheable/releases/113608235",
+      "assets_url": "https://api.github.com/repos/jaredwray/cacheable/releases/113608235/assets",
+      "upload_url": "https://uploads.github.com/repos/jaredwray/cacheable/releases/113608235/assets{?name,label}",
+      "html_url": "https://github.com/jaredwray/cacheable/releases/tag/2023-07-26",
+      "id": 113608235,
+      "author": {
+        "login": "jaredwray",
+        "id": 1205481,
+        "node_id": "MDQ6VXNlcjEyMDU0ODE=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1205481?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jaredwray",
+        "html_url": "https://github.com/jaredwray",
+        "followers_url": "https://api.github.com/users/jaredwray/followers",
+        "following_url": "https://api.github.com/users/jaredwray/following{/other_user}",
+        "gists_url": "https://api.github.com/users/jaredwray/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/jaredwray/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/jaredwray/subscriptions",
+        "organizations_url": "https://api.github.com/users/jaredwray/orgs",
+        "repos_url": "https://api.github.com/users/jaredwray/repos",
+        "events_url": "https://api.github.com/users/jaredwray/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/jaredwray/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "node_id": "RE_kwDOBY2RXM4GxYYr",
+      "tag_name": "2023-07-26",
+      "target_commitish": "main",
+      "name": "2023-07-26",
+      "draft": false,
+      "prerelease": false,
+      "created_at": "2023-07-26T04:54:19Z",
+      "published_at": "2023-07-26T05:01:00Z",
+      "assets": [],
+      "tarball_url": "https://api.github.com/repos/jaredwray/cacheable/tarball/2023-07-26",
+      "zipball_url": "https://api.github.com/repos/jaredwray/cacheable/zipball/2023-07-26",
+      "body": "# cacheable-request v10.2.13\r\n* Fixing source map issues https://github.com/jaredwray/cacheable/pull/257\r\n* Upgraded Keyv to v4.5.3\r\n* Removed @types/delay and @types/get-stream as typing is included by default\r\n\r\n## Mono Repo\r\n\r\nWe have now moved to a mono repo and also launched a new website https://cacheable.org. Our plan is now to build out cacheable request version with HTTP 2 support as a new module in addition other caching libraries. 🎉 \r\n\r\n## What's Changed\r\n* initial mono repo by @jaredwray in https://github.com/jaredwray/cacheable/pull/255\r\n* Mono repo site updates by @jaredwray in https://github.com/jaredwray/cacheable/pull/256\r\n* fixing source map issues by including src directory by @jaredwray in https://github.com/jaredwray/cacheable/pull/257\r\n* upgrading xo to 0.55.0 by @jaredwray in https://github.com/jaredwray/cacheable/pull/258\r\n* upgrading jest and typescript to latest by @jaredwray in https://github.com/jaredwray/cacheable/pull/259\r\n* upgrading keyv to 4.5.3 by @jaredwray in https://github.com/jaredwray/cacheable/pull/260\r\n* removing @types/delay and @types/get-stream as it is included by @jaredwray in https://github.com/jaredwray/cacheable/pull/261\r\n\r\n\r\n**Full Changelog**: https://github.com/jaredwray/cacheable/compare/v10.2.12...2023-07-26",
+      "mentions_count": 1
+    },
+    {
       "url": "https://api.github.com/repos/jaredwray/cacheable/releases/109555822",
       "assets_url": "https://api.github.com/repos/jaredwray/cacheable/releases/109555822/assets",
       "upload_url": "https://uploads.github.com/repos/jaredwray/cacheable/releases/109555822/assets{?name,label}",
@@ -844,7 +884,7 @@
       "received_events_url": "https://api.github.com/users/jaredwray/received_events",
       "type": "User",
       "site_admin": false,
-      "contributions": 296
+      "contributions": 313
     },
     {
       "login": "lukechilds",

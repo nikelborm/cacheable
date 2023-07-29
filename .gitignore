@@ -92,4 +92,4 @@ request.md
 cacheable.md
 
 # Database
-.sqlite
+*.sqlite

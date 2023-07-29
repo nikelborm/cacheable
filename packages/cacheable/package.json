@@ -10,7 +10,7 @@
 	"private": false,
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "test": "echo \"Error: no test specified\"",
+    "test": "xo",
     "clean": "rm -rf dist && rm -rf node_modules"
   },
 	"devDependencies": {

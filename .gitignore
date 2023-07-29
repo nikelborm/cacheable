@@ -90,3 +90,6 @@ coverage.lcov
 *github.json
 request.md
 cacheable.md
+
+# Database
+.sqlite

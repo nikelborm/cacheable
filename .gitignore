@@ -88,3 +88,5 @@ coverage.lcov
 github.json
 request.md
 /packages/request/test/*.sqlite
+packages/website/site/_data/github.json
+packages/request/test/testdb.sqlite

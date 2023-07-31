@@ -1,6 +1,6 @@
 {
 	"name": "cacheable",
-	"version": "0.0.1",
+	"version": "0.3.0",
 	"description": "Simple Caching Engine using Keyv",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",

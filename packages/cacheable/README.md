@@ -19,15 +19,14 @@
 * Comprehensive testing and code coverage
 * Maintained and supported
 
-# Getting Started
+## Getting Started
 
 `cacheable` is primarily used as an extension to you caching engine with a robust storage backend [Keyv](https://keyv.org), Memonization, Hooks, Events, and Statistics.
-
-## Installation
 
 ```bash
 npm install cacheable
 ```
+
 ## Extending Your own Caching Engine
 
 ```javascript
@@ -42,7 +41,7 @@ export class MyCache extends Cacheable {
 
 From here you now how the ability to use the `cacheable` API. You can also extend the API to add your own functionality.
 
-# Storage Adapters and Keyv
+## Storage Adapters and Keyv
 
 To set Keyv as the storage engine, you can do the following:
 
@@ -72,7 +71,7 @@ export class MyCache extends Cacheable {
 }
 ```
 
-# Statistics
+## Statistics
 
 To get statistics on your cache, you can do the following:
 
@@ -148,7 +147,7 @@ hits: The number of cache hits. A cache hit occurs when the requested data is fo
 * `loadExceptionCount`: The number of times cache loading has failed due to exceptions.
 * `totalLoadTime`: The total time spent loading new values into the cache, typically measured in milliseconds.
 
-# Hooks and Events
+## Hooks and Events
 
 The following hooks are available for you to extend the functionality of `cacheable`:
 
@@ -183,7 +182,7 @@ The following events are available for you to extend the functionality of `cache
 * `disconnect`: This is called when the `disconnect` method is called.
 * `error`: This is called when an error occurs.
 
-# API
+## API
 
 * `set(key, value, ttl?)`: Sets a value in the cache.
 * `setMany([{key, value, ttl?}])`: Sets multiple values in the cache.
@@ -201,9 +200,9 @@ The following events are available for you to extend the functionality of `cache
 * `removeListener(event, callback)`: Removes a listener.
 * `store`: The [Keyv](https://keyv.org) storage engine.
 
-# How to Contribute
+## How to Contribute
 
-You can contribute by forking the repo and submitting a pull request. Please make sure to add tests and update the documentation. To learn more about how to contribute go to our main README https://github.com/jaredwray/cacheable. This will talk about how to `Open a Pull Request`, `Ask a Question`, or `Post an Issue`.
+You can contribute by forking the repo and submitting a pull request. Please make sure to add tests and update the documentation. To learn more about how to contribute go to our main README [https://github.com/jaredwray/cacheable](https://github.com/jaredwray/cacheable). This will talk about how to `Open a Pull Request`, `Ask a Question`, or `Post an Issue`.
 
-# License and Copyright
-MIT © Jared Wray
+## License and Copyright
+MIT © Jared Wray - [https://github.com/jaredwray/cacheable/blob/main/LICENSE](https://github.com/jaredwray/cacheable/blob/main/LICENSE)

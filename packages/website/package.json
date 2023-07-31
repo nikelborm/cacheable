@@ -12,7 +12,7 @@
     "build": "yarn generate-docs && docula build",
     "build-serve": "yarn generate-docs && docula serve",
     "clean": "rm -rf ./dist",
-    "serve": "docula serve"
+    "serve": "yarn generate-docs && docula serve"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",

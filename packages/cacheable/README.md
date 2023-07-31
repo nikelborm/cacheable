@@ -175,6 +175,24 @@ The following events are available for you to extend the functionality of `cache
 * `disconnect`: This is called when the `disconnect` method is called.
 * `error`: This is called when an error occurs.
 
+# API
+
+* `set(key, value, ttl?)`: Sets a value in the cache.
+* `setMany([{key, value, ttl?}])`: Sets multiple values in the cache.
+* `get(key)`: Gets a value from the cache.
+* `has(key)`: Checks if a value exists in the cache.
+* `getMany([keys])`: Gets multiple values from the cache.
+* `delete(key)`: Deletes a value from the cache.
+* `clear()`: Clears the cache.
+* `disconnect()`: Disconnects from the cache.
+* `getStats()`: Gets statistics from the cache.
+* `setHook(hook, callback)`: Sets a hook.
+* `deleteHook(hook)`: Removes a hook.
+* `emitEvent(event, data)`: Emits an event.
+* `on(event, callback)`: Listens for an event.
+* `removeListener(event, callback)`: Removes a listener.
+* `store`: The [Keyv](https://keyv.org) storage engine.
+
 # How to Contribute
 
 You can contribute by forking the repo and submitting a pull request. Please make sure to add tests and update the documentation. To learn more about how to contribute go to our main README https://github.com/jaredwray/cacheable. This will talk about how to `Open a Pull Request`, `Ask a Question`, or `Post an Issue`.

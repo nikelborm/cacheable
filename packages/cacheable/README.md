@@ -154,8 +154,12 @@ The following hooks are available for you to extend the functionality of `cachea
 
 * `preSet`: This is called before the `set` method is called.
 * `postSet`: This is called after the `set` method is called.
+* `preSetMany`: This is called before the `setMany` method is called.
+* `postSetMany`: This is called after the `setMany` method is called.
 * `preGet`: This is called before the `get` method is called.
 * `postGet`: This is called after the `get` method is called.
+* `preGetMany`: This is called before the `getMany` method is called.
+* `postGetMany`: This is called after the `getMany` method is called.
 
 An example of how to use these hooks:
 
@@ -171,7 +175,11 @@ cacheable.hooks.setHook('preSet', (key, value) => {
 The following events are available for you to extend the functionality of `cacheable`:
 
 * `set`: This is called when the `set` method is called.
+* `setMany`: This is called when the `setMany` method is called.
 * `get`: This is called when the `get` method is called.
+* `getMany`: This is called when the `getMany` method is called.
+* `clear`: This is called when the `clear` method is called.
+* `has`: This is called when the `has` method is called.
 * `disconnect`: This is called when the `disconnect` method is called.
 * `error`: This is called when an error occurs.
 

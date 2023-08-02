@@ -96,6 +96,7 @@ export class Cacheable extends EventEmitter {
 	public triggerHook(name: string, ...args: any[]) {
 		const hook = this._hooks.get(name);
 		if (hook) {
+			/* eslint-disable-next-line @typescript-eslint/no-unsafe-argument */
 			hook(...args);
 		}
 	}

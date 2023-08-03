@@ -34,6 +34,10 @@ export enum CacheableHooks {
 	POST_GET_MANY = 'postGetMany',
 }
 
+export enum CacheableEvents {
+	ERROR = 'error',
+}
+
 export class Cacheable extends EventEmitter {
 	private _store: Keyv = new Keyv();
 	private readonly _stats: CacheableStats = {currentSize: 0, cacheSize: 0, hits: 0, misses: 0, hitRate: 0, averageLoadPenalty: 0, loadSuccessCount: 0, loadExceptionCount: 0, totalLoadTime: 0, topHits: [], leastUsed: []};
@@ -92,6 +96,7 @@ export class Cacheable extends EventEmitter {
 	public triggerHook(name: string, ...args: any[]) {
 		const hook = this._hooks.get(name);
 		if (hook) {
+			/* eslint-disable-next-line @typescript-eslint/no-unsafe-argument */
 			hook(...args);
 		}
 	}
@@ -102,13 +107,23 @@ export class Cacheable extends EventEmitter {
 			this.triggerHook(CacheableHooks.PRE_GET, key);
 			result = await this._store.get(key) as T;
 			this.triggerHook(CacheableHooks.POST_GET, key, result);
-		} catch {}
+		} catch (error: unknown) {
+			this.emit(CacheableEvents.ERROR, error);
+		}
 
 		return result;
 	}
 
 	public async set<T>(key: string, value: T, ttl?: number): Promise<boolean> {
-		const result = await this._store.set(key, value, ttl);
+		let result = false;
+		try {
+			this.triggerHook(CacheableHooks.PRE_SET, key, value, ttl);
+			result = await this._store.set(key, value, ttl);
+			this.triggerHook(CacheableHooks.POST_SET, key, value, ttl);
+		} catch (error: unknown) {
+			this.emit(CacheableEvents.ERROR, error);
+		}
+
 		return result;
 	}
 }

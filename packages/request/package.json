@@ -114,6 +114,7 @@
 			"@typescript-eslint/consistent-type-definitions": 0,
 			"@typescript-eslint/prefer-nullish-coalescing": 0,
 			"n/prefer-global/url": 0,
+			"n/no-deprecated-api": 0,
 			"unicorn/prefer-event-target": 0
 		}
 	}

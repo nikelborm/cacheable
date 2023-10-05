@@ -45,11 +45,11 @@
 		"responselike": "^3.0.0"
 	},
 	"devDependencies": {
-		"@keyv/sqlite": "^3.6.5",
+		"@keyv/sqlite": "^3.6.6",
 		"@types/jest": "^29.5.5",
 		"@types/node": "^20.8.2",
 		"@types/responselike": "^1.0.0",
-		"@types/sqlite3": "^3.1.8",
+		"@types/sqlite3": "^3.1.9",
 		"body-parser": "^1.20.2",
 		"delay": "^6.0.0",
 		"eslint": "^8.50.0",

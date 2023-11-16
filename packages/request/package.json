@@ -36,7 +36,7 @@
 		"@types/http-cache-semantics": "It needs to be in the dependencies list and not devDependencies because otherwise projects that use this one will be getting `Could not find a declaration file for module 'http-cache-semantics'` error when running `tsc`, see https://github.com/jaredwray/cacheable-request/issues/194 for details"
 	},
 	"dependencies": {
-		"@types/http-cache-semantics": "^4.0.2",
+		"@types/http-cache-semantics": "^4.0.4",
 		"get-stream": "^6.0.1",
 		"http-cache-semantics": "^4.1.1",
 		"keyv": "^4.5.4",
@@ -48,7 +48,7 @@
 		"@keyv/sqlite": "^3.6.6",
 		"@types/jest": "^29.5.8",
 		"@types/node": "^20.9.0",
-		"@types/responselike": "^1.0.1",
+		"@types/responselike": "^1.0.3",
 		"@types/sqlite3": "^3.1.9",
 		"body-parser": "^1.20.2",
 		"delay": "^6.0.0",

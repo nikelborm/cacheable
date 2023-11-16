@@ -39,7 +39,7 @@
 		"@types/http-cache-semantics": "^4.0.2",
 		"get-stream": "^6.0.1",
 		"http-cache-semantics": "^4.1.1",
-		"keyv": "^4.5.3",
+		"keyv": "^4.5.4",
 		"mimic-response": "^4.0.0",
 		"normalize-url": "^8.0.0",
 		"responselike": "^3.0.0"

@@ -657,32 +657,33 @@ test('decompresses cached responses', async () => {
 	expect(value.body).toBe('{"foo":"bar"}');
 });
 
-test('cache remote address', async () => {
+test('cache status message', async () => {
 	const endpoint = '/etag';
 	const cache = new Map();
 	const cacheableRequest = new CacheableRequest(request, cache);
 	const cacheableRequestHelper = promisify(cacheableRequest.request());
 	cacheableRequest.addHook(onResponse, (value: CacheValue, response: any) => {
-		if (response.connection) {
-			value.remoteAddress = response.connection.remoteAddress;
+		if (response) {
+			value.statusMessage = response.statusMessage;
 		}
 
 		return value;
 	});
 	const response: any = await cacheableRequestHelper(s.url + endpoint);
 	const cacheValue = JSON.parse(await cache.get(`cacheable-request:GET:${s.url + endpoint}`));
-	expect(cacheValue.value.remoteAddress).toBeDefined();
+	expect(cacheValue.value.statusMessage).toBe('OK');
 	expect(response.statusCode).toBe(200);
+	cacheableRequest.removeHook(onResponse);
 });
 
-test('do not cache remote address', async () => {
+test('do not cache status message', async () => {
 	const endpoint = '/etag';
 	const cache = new Map();
 	const cacheableRequest = new CacheableRequest(request, cache);
 	const cacheableRequestHelper = promisify(cacheableRequest.request());
 	const response: any = await cacheableRequestHelper(s.url + endpoint);
 	const cacheValue = JSON.parse(await cache.get(`cacheable-request:GET:${s.url + endpoint}`));
-	expect(cacheValue.value.remoteAddress).toBeUndefined();
+	expect(cacheValue.value.statusMessage).toBeUndefined();
 	expect(response.statusCode).toBe(200);
 });
 test('socket within keepAlive Agent has been free\'d after cache revalidation', async () => {

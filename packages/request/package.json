@@ -115,7 +115,8 @@
 			"@typescript-eslint/prefer-nullish-coalescing": 0,
 			"n/prefer-global/url": 0,
 			"n/no-deprecated-api": 0,
-			"unicorn/prefer-event-target": 0
+			"unicorn/prefer-event-target": 0,
+			"@typescript-eslint/no-unnecessary-type-assertion": 0
 		}
 	}
 }

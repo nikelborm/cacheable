@@ -193,7 +193,7 @@ test('cacheableRequest does not cache response if request is aborted before rece
 			}, 100);
 		});
 		const cacheableRequest = new CacheableRequest(request).request();
-		/* eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion */
+
 		const options = url.parse(s.url!);
 		options.path = '/delay-start';
 		cacheableRequest(options)
@@ -226,7 +226,7 @@ test('cacheableRequest does not cache response if request is aborted after recei
 			}, 50);
 		});
 		const cacheableRequest = new CacheableRequest(request).request();
-		/* eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion */
+
 		const options = url.parse(s.url!);
 		options.path = '/delay-partial';
 		cacheableRequest(options)

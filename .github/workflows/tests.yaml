@@ -21,7 +21,7 @@ jobs:
           node-version: ${{ matrix.node }}
       
       - name: Install Dependencies  
-        run: yarn
+        run: yarn --ignore-engines
 
       - name: Run Build  
         run: yarn build

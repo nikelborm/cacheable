@@ -9,14 +9,17 @@ import CachePolicy from 'http-cache-semantics';
 import Response from 'responselike';
 import Keyv from 'keyv';
 import mimicResponse from 'mimic-response';
-import {RequestFn, StorageAdapter, CacheResponse, CacheValue, CacheableOptions, UrlOption, CacheError, RequestError, Emitter, CacheableRequestFunction} from './types.js';
+import {
+	RequestFn, StorageAdapter, CacheResponse, CacheValue, CacheableOptions, UrlOption, CacheError, RequestError, Emitter, CacheableRequestFunction,
+} from './types.js';
 
-type Func = (...args: any[]) => any;
+// eslint-disable-next-line @typescript-eslint/naming-convention
+type Function_ = (...arguments_: any[]) => any;
 
 class CacheableRequest {
 	cache: StorageAdapter;
 	cacheRequest: RequestFn;
-	hooks: Map<string, Func> = new Map<string, Func>();
+	hooks: Map<string, Function_> = new Map<string, Function_>();
 	constructor(cacheRequest: RequestFn, cacheAdapter?: StorageAdapter | string) {
 		if (cacheAdapter instanceof Keyv) {
 			this.cache = cacheAdapter;
@@ -37,7 +40,7 @@ class CacheableRequest {
 	}
 
 	request = () => (options: CacheableOptions,
-		cb?: (response: CacheResponse) => void): Emitter => {
+		callback?: (response: CacheResponse) => void): Emitter => {
 		let url;
 		if (typeof options === 'string') {
 			url = normalizeUrlObject(urlLib.parse(options));
@@ -89,7 +92,7 @@ class CacheableRequest {
 		const makeRequest = (options_: any) => {
 			madeRequest = true;
 			let requestErrored = false;
-			let requestErrorCallback: (...args: any[]) => void = () => {/* do nothing */};
+			let requestErrorCallback: (...arguments_: any[]) => void = () => {/* do nothing */};
 
 			const requestErrorPromise = new Promise<void>(resolve => {
 				requestErrorCallback = () => {
@@ -111,7 +114,9 @@ class CacheableRequest {
 								.once('end', resolve);
 						});
 						const headers = convertHeaders(revalidatedPolicy.policy.responseHeaders());
-						response = new Response({statusCode: revalidate.statusCode, headers, body: revalidate.body, url: revalidate.url});
+						response = new Response({
+							statusCode: revalidate.statusCode, headers, body: revalidate.body, url: revalidate.url,
+						});
 						response.cachePolicy = revalidatedPolicy.policy;
 						response.fromCache = true;
 					}
@@ -169,8 +174,8 @@ class CacheableRequest {
 				}
 
 				ee.emit('response', clonedResponse ?? response);
-				if (typeof cb === 'function') {
-					cb(clonedResponse ?? response);
+				if (typeof callback === 'function') {
+					callback(clonedResponse ?? response);
 				}
 			};
 
@@ -198,12 +203,14 @@ class CacheableRequest {
 				const policy = CachePolicy.fromObject(cacheEntry.cachePolicy);
 				if (policy.satisfiesWithoutRevalidation(options_) && !options_.forceRefresh) {
 					const headers = convertHeaders(policy.responseHeaders());
-					const response: any = new Response({statusCode: cacheEntry.statusCode, headers, body: cacheEntry.body, url: cacheEntry.url});
+					const response: any = new Response({
+						statusCode: cacheEntry.statusCode, headers, body: cacheEntry.body, url: cacheEntry.url,
+					});
 					response.cachePolicy = policy;
 					response.fromCache = true;
 					ee.emit('response', response);
-					if (typeof cb === 'function') {
-						cb(response);
+					if (typeof callback === 'function') {
+						callback(response);
 					}
 				} else if (policy.satisfiesWithoutRevalidation(options_) && Date.now() >= policy.timeToLive() && options_.forceRefresh) {
 					await this.cache.delete(key);
@@ -238,9 +245,9 @@ class CacheableRequest {
 		return ee;
 	};
 
-	addHook = (name: string, fn: Func) => {
+	addHook = (name: string, function_: Function_) => {
 		if (!this.hooks.has(name)) {
-			this.hooks.set(name, fn);
+			this.hooks.set(name, function_);
 		}
 	};
 
@@ -248,7 +255,7 @@ class CacheableRequest {
 
 	getHook = (name: string) => this.hooks.get(name);
 
-	runHook = async (name: string, ...args: any[]): Promise<CacheValue> => this.hooks.get(name)?.(...args);
+	runHook = async (name: string, ...arguments_: any[]): Promise<CacheValue> => this.hooks.get(name)?.(...arguments_);
 }
 
 const entries = Object.entries as <T>(object: T) => Array<[keyof T, T[keyof T]]>;

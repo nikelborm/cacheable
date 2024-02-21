@@ -7,7 +7,9 @@
 
 /// <reference types="node" />
 
-import {request, RequestOptions, ClientRequest, ServerResponse} from 'node:http';
+import {
+	request, RequestOptions, ClientRequest, ServerResponse,
+} from 'node:http';
 import {URL} from 'node:url';
 import {EventEmitter} from 'node:events';
 import {Buffer} from 'node:buffer';
@@ -15,13 +17,14 @@ import {Store} from 'keyv';
 import ResponseLike from 'responselike';
 import {CachePolicyObject} from 'http-cache-semantics';
 
+// eslint-disable-next-line unicorn/prevent-abbreviations
 export type RequestFn = typeof request;
 export type RequestFunction = typeof request;
 export type CacheResponse = ServerResponse | typeof ResponseLike;
 
 export type CacheableRequestFunction = (
 	options: CacheableOptions,
-	cb?: (response: CacheResponse) => void
+	callback?: (response: CacheResponse) => void
 ) => Emitter;
 
 export type CacheableOptions = Options & RequestOptions | string | URL;

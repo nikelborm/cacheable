@@ -339,15 +339,15 @@ test('should return default url', async () => testCacheKey({method: 'POST'}, 'PO
 test('request options path query is passed through', async () => {
 	const cacheableRequest = new CacheableRequest(request);
 	const cacheableRequestHelper = promisify(cacheableRequest.request());
-	const argString = `${s.url}/echo?foo=bar`;
-	const argUrl = new url.URL(argString);
-	const urlObject = url.parse(argString);
-	const argOptions = {
+	const argumentString = `${s.url}/echo?foo=bar`;
+	const argumentUrl = new url.URL(argumentString);
+	const urlObject = url.parse(argumentString);
+	const argumentOptions = {
 		hostname: urlObject.hostname,
 		port: urlObject.port,
 		path: urlObject.path,
 	};
-	const inputs = [argString, argUrl, argOptions];
+	const inputs = [argumentString, argumentUrl, argumentOptions];
 	for (const input of inputs) {
 		// eslint-disable-next-line no-await-in-loop
 		const response: any = await cacheableRequestHelper(input);
@@ -587,15 +587,15 @@ test('Keyv cache adapters load via connection uri', async () => {
 		'sqlite://test/testdb.sqlite',
 	);
 	const cacheableRequestHelper = promisify(cacheableRequest.request());
-	const db = new sqlite3.Database('test/testdb.sqlite');
+	const database = new sqlite3.Database('test/testdb.sqlite');
 	const firstResponse: any = await cacheableRequestHelper(s.url + endpoint);
 	await delay(1000);
 	const secondResponse: any = await cacheableRequestHelper(s.url + endpoint);
-	db.all(`SELECT * FROM keyv WHERE "key" = "cacheable-request:GET:${
+	database.all(`SELECT * FROM keyv WHERE "key" = "cacheable-request:GET:${
 		s.url + endpoint
 	}"`, (error, data) => {
 		expect(data.length).toBe(1);
-		db.all('DELETE FROM keyv');
+		database.all('DELETE FROM keyv');
 	});
 	expect(firstResponse.fromCache).toBeFalsy();
 	expect(secondResponse.fromCache).toBeTruthy();

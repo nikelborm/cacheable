@@ -9,7 +9,7 @@
 	"exports": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"engines": {
-		"node": ">=14.16"
+		"node": ">=18"
 	},
 	"scripts": {
 		"test": "xo --fix && NODE_OPTIONS=--experimental-vm-modules jest --coverage ",

@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ['16', '18', '20']
+        node: ['18', '20']
     name: Node ${{ matrix.node }}
     steps:
       - uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
           node-version: ${{ matrix.node }}
       
       - name: Install Dependencies  
-        run: yarn --ignore-engines
+        run: yarn
 
       - name: Run Build  
         run: yarn build

@@ -1,7 +1,7 @@
 import {request} from 'node:http';
+import {test, expect} from 'vitest';
 import Keyv from 'keyv';
 import CacheableRequest from '../src/index.js';
-import {CacheError} from '../src/types.js';
 
 test('CacheableRequest is a function', () => {
 	expect(typeof CacheableRequest).toBe('function');

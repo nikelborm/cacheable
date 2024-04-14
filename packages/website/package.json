@@ -8,15 +8,17 @@
   "private": true,
   "scripts": {
     "test": "echo 'no tests needed'",
+    "test:ci": "echo 'no tests needed'",
     "generate-docs": "ts-node ./src/docs.ts",
-    "build": "yarn generate-docs && docula build",
-    "build-serve": "yarn generate-docs && docula serve",
-    "clean": "rm -rf ./dist",
-    "serve": "yarn generate-docs && docula serve"
+    "build": "pnpm generate-docs && docula build",
+    "build-serve": "pnpm generate-docs && docula serve",
+    "clean": "rimraf ./dist",
+    "serve": "pnpm generate-docs && docula serve"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
     "docula": "^0.2.0",
+    "rimraf": "^5.0.5",
     "ts-node": "^10.9.1"
   },
   "dependencies": {

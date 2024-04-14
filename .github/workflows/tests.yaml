@@ -14,22 +14,26 @@ jobs:
         node: ['18', '20']
     name: Node ${{ matrix.node }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-      
-      - name: Install Dependencies  
-        run: yarn
 
-      - name: Run Build  
-        run: yarn build
-        
-      - name: Test Packages
-        run: yarn test
+      - name: Install PNPM
+        run: npm install -g pnpm
 
-      - name: Code Coverage
-        uses: codecov/codecov-action@v2
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm build
+
+      - name: Test
+        run: pnpm test:ci
+
+      - name: Codecov
+        uses: codecov/codecov-action@v3
         with:
+          files: ./coverage/lcov.info
           token: ${{ secrets.CODECOV_KEY }}

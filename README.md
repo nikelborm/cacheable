@@ -9,7 +9,7 @@
 
 # How to Use the Cacheable Mono Repo
 
-Cacheable has the main package `cacheable-request` under `/packages/request` and its website. In addtion we have a couple of other documents for review:
+Cacheable has the main package `cacheable-request` under `/packages/cacheable-request` and its website. In addtion we have a couple of other documents for review:
 
 * [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - Our code of conduct
 * [CONTRIBUTING.md](CONTRIBUTING.md) - How to contribute to this project
@@ -21,7 +21,7 @@ You can contribute changes to this repo by opening a pull request:
 
 1) After forking this repository to your Git account, make the proposed changes on your forked branch.
 2) Run tests and linting locally.
-	- Run `yarn && yarn test`.
+	- Run `pnpm i && pnpm test`.
 3) Commit your changes and push them to your forked repository.
 4) Navigate to the main `cacheable` repository and select the *Pull Requests* tab.
 5) Click the *New pull request* button, then select the option "Compare across forks"

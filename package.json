@@ -13,7 +13,6 @@
     "build": "pnpm recursive run build",
     "test": " pnpm build && pnpm recursive run test",
     "test:ci": "c8 --reporter=lcov pnpm recursive run test:ci",
-    "website:build": "pnpm run build --filter @cacheable/website",
     "clean": "rimraf node_modules yarn.lock pnpm-lock.yaml && pnpm run clean --recursive"
   },
   "dependencies": {

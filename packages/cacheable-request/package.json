@@ -64,40 +64,8 @@
 		"vitest": "^1.6.0",
 		"xo": "^0.58.0"
 	},
-	"jest": {
-		"collectCoverageFrom": [
-			"src/**/*.{ts,js}"
-		],
-		"extensionsToTreatAsEsm": [
-			".ts"
-		],
-		"resolver": "ts-jest-resolver",
-		"moduleFileExtensions": [
-			"ts",
-			"js"
-		],
-		"transform": {
-			"^.+\\.(ts|tsx)$": [
-				"ts-jest",
-				{
-					"tsconfig": "./tsconfig.build.json",
-					"useESM": true
-				}
-			]
-		},
-		"testMatch": [
-			"**/test/*.test.(ts|js)"
-		],
-		"testEnvironment": "node"
-	},
 	"xo": {
-		"plugins": [
-			"jest"
-		],
-		"extends": [
-			"plugin:jest/recommended"
-		],
-		"rules": {
+	"rules": {
 			"@typescript-eslint/triple-slash-reference": 0,
 			"@typescript-eslint/no-namespace": 0,
 			"@typescript-eslint/no-unsafe-assignment": 0,

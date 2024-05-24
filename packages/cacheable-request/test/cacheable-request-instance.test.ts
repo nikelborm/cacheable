@@ -308,7 +308,7 @@ test('cacheableRequest hashes request body as cache key', async () => {
 test('cacheableRequest skips cache for streamed body', () => {
 	const cache = {
 		get() {
-			fail(new CacheError(new Error('Cache error'))); // eslint-disable-line jest/no-jasmine-globals
+			throw new CacheError(new Error('Cache error'));
 		},
 		set() {
 			throw new Error('cant set');

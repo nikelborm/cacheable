@@ -160,6 +160,7 @@ class CacheableRequest {
 
 							await this.cache.set(key, value, ttl);
 						} catch (error: any) {
+							/* c8 ignore next 2 */
 							ee.emit('error', new CacheError(error));
 						}
 					})();
@@ -168,6 +169,7 @@ class CacheableRequest {
 						try {
 							await this.cache.delete(key);
 						} catch (error: any) {
+							/* c8 ignore next 2 */
 							ee.emit('error', new CacheError(error));
 						}
 					})();

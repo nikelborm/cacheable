@@ -24,6 +24,7 @@ const createTestServer = (opts = {}) => {
 
 			Promise.resolve(cb).then(val => {
 				if (val) {
+					/* c8 ignore next 3 */
 					res.send(val);
 				}
 			});

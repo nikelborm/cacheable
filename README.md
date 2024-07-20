@@ -46,11 +46,11 @@ To ask a question, create an issue with the label "question." In the issue descr
 
 ## Packages in this Repository
 
-* [cacheable-request](https://github.com/jaredwray/cacheable/tree/main/packages/request): Wrap native HTTP requests with RFC compliant cache support
-* [cacheable](https://github.com/jaredwray/cacheable/tree/main/packages/request): Simple caching engine that uses Keyv as the storage provider. It is designed to be simple to use and extend.
+* [cacheable-request](https://github.com/jaredwray/cacheable/tree/main/packages/cacheable-request): Wrap native HTTP requests with RFC compliant cache support
+* [cacheable](https://github.com/jaredwray/cacheable/tree/main/packages/cacheable): Simple caching engine that uses Keyv as the storage provider. It is designed to be simple to use and extend.
 * [website](https://github.com/jaredwray/cacheable/tree/main/packages/website): Website for cacheable.org site and documentation
 
-There are currently plans for muyltiple other packages to be added to this repository. If you have any ideas for packages that you would like to see added, please open an issue in the main repository.
+There are currently plans for multiple other packages to be added to this repository. If you have any ideas for packages that you would like to see added, please open an issue in the main repository.
 
 ## License
 
